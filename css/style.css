@@ -1,0 +1,588 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19 Jun, 2020, 11:25:51 AM
+    Author     : Prince Chaurasiya
+*/
+@font-face {
+    font-family: Playball-Regular;
+    src: url('../fonts/Playball-Regular.ttf');
+}
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url('../fonts/ProximaNova-Regular.otf');
+}
+@font-face {
+    font-family: NotoSans-Regular;
+    src: url('../fonts/NotoSans-Regular.ttf');
+}
+@font-face {
+    font-family: Karma-Regular;
+    src: url('../fonts/Karma-Regular.ttf');
+}
+
+body {
+    font-family: "ProximaNova-Regular", sans-serif;
+}
+
+.logo-container {
+    float: left;
+    height: 40px;
+    width: 100%;
+}
+
+.logo-title{
+    padding: 0px 5px;
+    display: inline-block;
+    font-size: 30px;
+    color: #ec407a;
+}
+
+.logo-sub-title{
+    padding: 0px 5px;
+    display: inline-block;
+    font-size: 20px;
+    color: #000;
+}
+
+/*Footer..................................................................*/
+
+footer {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    padding: 14px 16px;
+}
+
+.footer-content {
+    float: left;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+    .footer-content {
+        width: 50%;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-content {
+        width: 25%;
+        text-align: left;
+    }
+}
+
+/*Content..................................................................*/
+
+.content {
+    padding-top: 0px;
+    min-height: 568px;
+}
+.content-padding {
+    padding-top: 70px;
+}
+
+/*Top Navigation Bar...........................................................*/
+
+.my-navbar {
+    height: 50px;
+    width: 100%;
+    background-color: #ec407a;
+    z-index: 99;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.my-navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.hamburger-button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	background-color: #000;
+	float: right;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 14px 16px;
+}
+
+.my-navbar a:hover, .hamburger-button:hover {
+	outline: none;
+    background-color: #fff;
+    color: #ec407a;
+}
+
+.my-navbar a.active {
+    background-color: #000;
+    color: white;
+}
+
+.my-navbar a.active:hover {
+    background-color: #fff;
+    color: #ec407a;
+}
+
+.my-navbar-brand {
+	color: #fff;
+	height: 50px;
+	width: 50px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/*Dropdown Buttons........................................................*/
+
+.clicked-dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.clicked-dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    display: block;
+    font-size: 17px;  
+    color: #fff;
+    text-align: left;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin: 0;
+    width: 100%;
+}
+
+.clicked-dropdown:hover .dropbtn {
+    background-color: #fff;
+    color: #ec407a;
+    position: static;
+}
+
+.clicked-dropdown button.active {
+    background-color: #ec407a;
+    color: white;
+}
+
+.clicked-dropdown button.active:hover {
+    background-color: #fff;
+    color: #ec407a;
+}
+
+.dropdown-content {
+	color: #000;
+	height: 0px;
+    display: block;
+    position: relative;
+    transition: 0.5s;
+    background-color: #e0e0e0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 110;
+}
+
+.dropdown .dropdown-content a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 100%;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/*Button....................................................................*/
+
+.button {
+    background-color: #ec407a;  
+    border: 2px solid #ec407a;
+    border-radius: 25px;
+    color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.button:hover {
+	outline: none;
+    background-color: #fff;
+    border-color: #ec407a;
+    color: #ec407a;
+}
+
+/*Left Navigation Bar for Categories......................................................*/
+
+.leftnav {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    transition: 0.5s;
+}
+.left-navigation-bar {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 130px;
+    padding-bottom: 0;
+    width: 200px;
+    height: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+}
+.inner-left-navigation-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 25px 0px 25px 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.inner-left-navigation-bar li a, .list-styling li a{
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.inner-left-navigation-bar li a.active, .list-styling li a.active{
+    background-color: #ec407a;
+    color: white;
+}
+
+.inner-left-navigation-bar li a:hover, .list-styling li a:hover{
+    text-decoration: none;
+}
+
+.inner-left-navigation-bar li a:hover:not(.active), .list-styling li a:hover:not(.active){
+    background-color: #ec407a;
+    color: white;
+}
+
+/*Pagination...............................................................*/
+
+.pagination, #pagination {
+    text-align: center;
+}
+.col-full {
+    width: 100%;
+}
+.col {
+    float: left;
+    position: relative;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.pagination a.next, .pagination a.prev {
+    width: auto;
+    padding: 0 15px;
+}
+.pagination a:hover {
+    color: #fff;
+    background-color: #ec407a;
+}
+.pagination span, .pagination a {
+    height: 44px;
+    line-height: 42px;
+    width: 44px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 900;
+    border: 1px solid #ec407a;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 3px 6px;
+}
+.pagination span.next, .pagination span.prev {
+    width: auto;
+    padding: 0 15px;
+}
+.pagination span.next, .pagination a.next {
+    border-radius: 0px 25px 25px 0px;
+}
+.pagination span.prev, .pagination a.prev {
+    border-radius: 25px 0px 0px 25px;
+}
+
+.pagination a {
+    background-color: #fff;
+    color: #ec407a;
+    text-decoration: none;
+}
+
+.jump_to_page_form {
+    padding: 0 15px;
+    width: auto;
+    display: inline-block;
+    margin: 3px 6px;
+    height: 44px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.jump_to_page_input {
+    float: left;
+    background-color: #fff;
+    color: #ec407a;
+    width: 85px;
+    height: 44px;
+    border: 1px solid #ec407a;
+    border-right: 0;
+    border-radius: 25px 0px 0px 25px;
+    display: inline-block;
+    margin: 3px 0px;
+    padding: 0 15px;
+}
+
+.jump_to_page_input:hover {
+    outline: none;
+}
+
+.jump_to_page_btn{
+    float: left;
+    background-color: #ec407a;
+    color: #fff;
+    height: 44px;
+    width: 65px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #ec407a;
+    border-radius: 0px 25px 25px 0px;
+    display: inline-block;
+    margin: 3px 0px;
+    padding: 0 15px;
+}
+
+.jump_to_page_btn:hover {
+    outline: none;
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+}
+
+.pagination-top span, .pagination-top a {
+    width: 44px;
+    text-align: center;
+    font-size: 18px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.pagination-top a {
+    color: #ec407a;
+    text-decoration: none;
+}
+
+.pagination-top a:hover {
+    color: #000;
+}
+
+/*Go to top button...........................................................*/
+
+#myBtn {
+    display: none;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ec407a;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#myBtn:hover {
+    border: 2px solid #ec407a;
+    background-color: #fff;
+    color: #ec407a;
+}
+
+/*Picture Categories button...........................................................*/
+
+#categoriesBtn {
+    display: block;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    bottom: 20px;
+    left: 10px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ec407a;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#categoriesBtn:hover {
+    border: 2px solid #ec407a;
+    background-color: #fff;
+    color: #ec407a;
+}
+
+/*Main Left Navigation Drawer.....................................*/
+
+.ulSideNav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: left;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.ulSideNav a:hover {
+    background-color: #fff;
+    color: #ec407a;
+}
+
+.ulSideNav a.active {
+    background-color: #ec407a;
+    color: white;
+}
+
+.ulSideNav a.active:hover {
+    background-color: #fff;
+    color: #ec407a;
+}
+
+.navlist {
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+
+/*Custom Checkbox..................................................................*/
+
+.checkbox_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkbox_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox_container input:checked ~ .checkmark {
+  background-color: #ec407a;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox_container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*Breadcrumb..................................................................*/
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #ec407a;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #000;
+  text-decoration: none;
+}
